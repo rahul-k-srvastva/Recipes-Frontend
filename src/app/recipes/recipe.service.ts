@@ -22,7 +22,11 @@ export class RecipeService{
   constructor(private shoppingListService:ShoppingListService){}    
 
   getRecipes(){
-      return this.recipes.slice(); // in order to get a new reference of recipes
+    return this.recipes.slice(); // in order to get a new reference of recipes
+  }
+
+  getRecipe(index : number){
+    return this.recipes[index];
   }
 
   addIngsToShoppingList(ingredients: Ingredient[]){
